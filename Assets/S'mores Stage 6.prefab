@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2166625629790819476, guid: e0701688c3e298645acbbac54e186bef, type: 3}
+  - {fileID: 2100000, guid: 9a8b73a0b05c2c8409c5753fc6668e0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,7 +135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2509986096332254394, guid: e0701688c3e298645acbbac54e186bef, type: 3}
+  - {fileID: 2100000, guid: 9a8b73a0b05c2c8409c5753fc6668e0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,6 +166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 330982124258673303}
   - component: {fileID: 7551965362176758442}
+  - component: {fileID: 5713347833168074449}
+  - component: {fileID: -7129811273229544850}
   m_Layer: 0
   m_Name: S'mores Stage 6
   m_TagString: Untagged
@@ -203,6 +205,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26473867d09b45e48b377834fe6ba1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5713347833168074449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450071976356766893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1100b4c30a82fa341a985a005a7ada68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterialRef: {fileID: 2100000, guid: 82aa13b115c7edc4cbf49eeb9459999e, type: 2}
+--- !u!65 &-7129811273229544850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450071976356766893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7528779508359432834
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +288,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5093728987026415683, guid: e0701688c3e298645acbbac54e186bef, type: 3}
+  - {fileID: 2100000, guid: 9a8b73a0b05c2c8409c5753fc6668e0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -338,7 +366,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8528597888031086824, guid: e0701688c3e298645acbbac54e186bef, type: 3}
+  - {fileID: 2100000, guid: 9a8b73a0b05c2c8409c5753fc6668e0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
