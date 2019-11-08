@@ -33,7 +33,7 @@ Destroy(this.gameObject);
         }
 
     }
-  void onTriggerEneter(Collider collider)
+  void OnTriggerEnter(Collider collider)
     {
         if (collider.transform.tag == "Destroy")
         {
