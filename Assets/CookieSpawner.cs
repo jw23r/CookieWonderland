@@ -7,6 +7,15 @@ public class CookieSpawner : MonoBehaviour
     int timer;
     int spawntimer;
     public GameObject Smores;
+    public GameObject ThinMint;
+    public GameObject Samoas;
+    public GameObject Tagalongs;
+    public GameObject DoSoDos;
+    public GameObject SavanhaSimles;
+    public GameObject trefoils;
+    public GameObject ToffeTastic;
+    int whatToSpawn;
+
     Vector3 startPos;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +35,39 @@ public class CookieSpawner : MonoBehaviour
         timer += 1;
         if (timer >= spawntimer)
         {
-    Instantiate(Smores, startPos , Quaternion.identity);
+            whatToSpawn = Random.Range(1, 18);
+            if (whatToSpawn <= 10)
+            {
+                Instantiate(Samoas, startPos, Quaternion.identity);
+            }
+            if (whatToSpawn == 11)
+            {
+                Instantiate(Tagalongs, startPos, Quaternion.identity);
+            }
+            if (whatToSpawn == 12)
+            {
+                Instantiate(ThinMint, startPos, Quaternion.identity);
+            }
+            if (whatToSpawn == 13)
+            {
+                Instantiate(DoSoDos, startPos, Quaternion.identity);
+            }
+            if (whatToSpawn == 14)
+            {
+                Instantiate(SavanhaSimles, startPos, Quaternion.identity);
+            }
+            if (whatToSpawn == 15)
+            {
+                Instantiate(trefoils, startPos, Quaternion.identity);
+            }
+            if (whatToSpawn == 16)
+            {
+                Instantiate(ToffeTastic, startPos, Quaternion.identity);
+            }
+            if (whatToSpawn == 17)
+            {
+                Instantiate(Smores, startPos, Quaternion.identity);
+            }
             timer = 0;
             spawntimer = Random.Range(100, 200);
         }
