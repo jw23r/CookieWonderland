@@ -30,7 +30,7 @@
         half _Glossiness;
         half _Metallic;
 		static half _Frequency = 5;
-		static half _Amplitude = 0.01;
+		static half _Amplitude = 0.1;
         fixed4 _Color;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
