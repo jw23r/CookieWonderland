@@ -21,24 +21,24 @@ public class CookieBehavior : MonoBehaviour
         {
             transform.Translate(Vector3.back * Time.deltaTime * 20);
         }**/
-       // if (turn == true)
-       // {
-            transform.Translate(Vector3.right * Time.deltaTime * 20);
+        // if (turn == true)
+        // {
+        transform.Translate(Vector3.right * Time.deltaTime * 20);
 
-       // }
-       if (destroy == true)
+        // }
+        if (destroy == true)
         {
-Destroy(this.gameObject);
-            print("help");
+            Destroy(this.gameObject);
+            //print("help");
         }
 
     }
-  void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider)
     {
         if (collider.transform.tag == "Destroy")
         {
-            
-            print("hit");
+
+            //print("hit");
             destroy = true;
 
         }
