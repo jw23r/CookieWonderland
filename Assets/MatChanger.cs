@@ -14,19 +14,19 @@ public class MatChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.transform.tag == "Chocolate")
+        if (collider.transform.tag == "Chocolate")
         {
-Renderer rend = GetComponent<Renderer>();
+            Renderer rend = GetComponent<Renderer>();
 
 
-        rend.material = newMaterialRef;
-            print("hit");
+            rend.material = newMaterialRef;
+            //print("hit");
         }
     }
 }

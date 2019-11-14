@@ -10,12 +10,13 @@ public class CookieSpawner : MonoBehaviour
     public GameObject ThinMint;
     public GameObject Samoas;
     public GameObject Tagalongs;
-    public GameObject DoSoDos;
+    public GameObject DoSiDos;
     public GameObject SavanhaSimles;
     public GameObject trefoils;
     public GameObject ToffeTastic;
     int whatToSpawn;
 
+    
     Vector3 startPos;
     // Start is called before the first frame update
     void Start()
@@ -50,7 +51,7 @@ public class CookieSpawner : MonoBehaviour
             }
             if (whatToSpawn == 13)
             {
-                Instantiate(DoSoDos, startPos, Quaternion.identity);
+                Instantiate(DoSiDos, startPos, Quaternion.identity);
             }
             if (whatToSpawn == 14)
             {
