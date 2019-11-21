@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CookieSpawner : MonoBehaviour
 {
-    int timer;
+    float timer;
     int spawntimer;
     public GameObject Smores;
     public GameObject ThinMint;
@@ -18,11 +18,12 @@ public class CookieSpawner : MonoBehaviour
 
     
     Vector3 startPos;
+    Vector3 rand;
     // Start is called before the first frame update
     void Start()
     {
         startPos = gameObject.transform.position;
-
+        rand = new Vector3(0, 0, Random.Range(-5,6));
         print("spawn");
     }
 
@@ -33,44 +34,44 @@ public class CookieSpawner : MonoBehaviour
     }
    public void SpawCookie()
     {
-        timer += 1;
+        timer += Time.deltaTime;
         if (timer >= spawntimer)
         {
             whatToSpawn = Random.Range(1, 18);
             if (whatToSpawn <= 10)
             {
-                Instantiate(Samoas, startPos, Quaternion.identity);
+                Instantiate(Samoas, startPos + rand , Quaternion.identity);
             }
             if (whatToSpawn == 11)
             {
-                Instantiate(Tagalongs, startPos, Quaternion.identity);
+                Instantiate(Tagalongs, startPos + rand, Quaternion.identity);
             }
             if (whatToSpawn == 12)
             {
-                Instantiate(ThinMint, startPos, Quaternion.identity);
+                Instantiate(ThinMint, startPos + rand, Quaternion.identity);
             }
             if (whatToSpawn == 13)
             {
-                Instantiate(DoSiDos, startPos, Quaternion.identity);
+                Instantiate(DoSiDos, startPos + rand, Quaternion.identity);
             }
             if (whatToSpawn == 14)
             {
-                Instantiate(SavanhaSimles, startPos, Quaternion.identity);
+                Instantiate(SavanhaSimles, startPos + rand, Quaternion.identity);
             }
             if (whatToSpawn == 15)
             {
-                Instantiate(trefoils, startPos, Quaternion.identity);
+                Instantiate(trefoils, startPos + rand, Quaternion.identity);
             }
             if (whatToSpawn == 16)
             {
-                Instantiate(ToffeTastic, startPos, Quaternion.identity);
+                Instantiate(ToffeTastic, startPos + rand, Quaternion.identity);
             }
             if (whatToSpawn == 17)
             {
-                Instantiate(Smores, startPos, Quaternion.identity);
+                Instantiate(Smores, startPos + rand, Quaternion.identity);
             }
             timer = 0;
-            spawntimer = Random.Range(50,100);
+            spawntimer = Random.Range(1,6);
         }
     }
 }
