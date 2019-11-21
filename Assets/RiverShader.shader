@@ -4,6 +4,7 @@
     {
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
+	    _NormTex("Normal Map", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
     }
@@ -20,17 +21,20 @@
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
 
-        sampler2D _MainTex;
-
+		
         struct Input
         {
-            float2 uv_MainTex;
+            float2 uv_MainTex : TEXCOORD0;
+			float2 uv_NormTex : TEXCOORD1;
         };
+
+        sampler2D _MainTex;
+		sampler2D _NormTex;
 
         half _Glossiness;
         half _Metallic;
 		static half _Frequency = 5;
-		static half _Amplitude = 0.01;
+		static half _Amplitude = 0.1;
         fixed4 _Color;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
@@ -39,7 +43,7 @@
         UNITY_INSTANCING_BUFFER_START(Props)
             // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
-	void vert(inout appdata_base v) {
+		void vert(inout appdata_full v) {
 			v.vertex.xyz += v.normal * sin(v.vertex.x * _Frequency + _Time.y) * _Amplitude;
 		}
         void surf (Input IN, inout SurfaceOutputStandard o)
@@ -51,7 +55,8 @@
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Alpha = c.a;
-        }
+			o.Normal = tex2D(_NormTex, IN.uv_NormTex).rgb;
+		}
         ENDCG
     }
     FallBack "Diffuse"
