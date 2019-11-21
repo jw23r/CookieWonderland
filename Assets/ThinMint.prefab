@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3274370032080223222}
   - component: {fileID: 218002547742054914}
   - component: {fileID: -506810049698068651}
+  - component: {fileID: 7270578277941041676}
   m_Layer: 0
   m_Name: ThinMint
   m_TagString: Untagged
@@ -153,3 +154,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7270578277941041676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4729806355826044838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1100b4c30a82fa341a985a005a7ada68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterialRef: {fileID: 2100000, guid: 82aa13b115c7edc4cbf49eeb9459999e, type: 2}

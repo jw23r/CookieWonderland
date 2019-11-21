@@ -70,7 +70,7 @@ public class CookieSpawner : MonoBehaviour
                 Instantiate(Smores, startPos, Quaternion.identity);
             }
             timer = 0;
-            spawntimer = Random.Range(100, 200);
+            spawntimer = Random.Range(50,100);
         }
     }
 }
