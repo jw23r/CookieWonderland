@@ -6,6 +6,8 @@ public class CookieSpawner : MonoBehaviour
 {
     float timer;
     int spawntimer;
+    public float cookieFloodTime = 10;
+    public float cookieFloodTimer ;
     public GameObject Smores;
     public GameObject ThinMint;
     public GameObject Samoas;
@@ -35,43 +37,56 @@ public class CookieSpawner : MonoBehaviour
    public void SpawCookie()
     {
         timer += Time.deltaTime;
-        if (timer >= spawntimer)
+
+        cookieFloodTimer += Time.deltaTime;
+        if (cookieFloodTimer < cookieFloodTime & timer >= spawntimer)
         {
-            whatToSpawn = Random.Range(1, 18);
-            if (whatToSpawn <= 10)
-            {
-                Instantiate(Samoas, startPos + rand , Quaternion.identity);
-            }
-            if (whatToSpawn == 11)
-            {
-                Instantiate(Tagalongs, startPos + rand, Quaternion.identity);
-            }
-            if (whatToSpawn == 12)
-            {
-                Instantiate(ThinMint, startPos + rand, Quaternion.identity);
-            }
-            if (whatToSpawn == 13)
-            {
-                Instantiate(DoSiDos, startPos + rand, Quaternion.identity);
-            }
-            if (whatToSpawn == 14)
-            {
-                Instantiate(SavanhaSimles, startPos + rand, Quaternion.identity);
-            }
-            if (whatToSpawn == 15)
-            {
-                Instantiate(trefoils, startPos + rand, Quaternion.identity);
-            }
-            if (whatToSpawn == 16)
-            {
-                Instantiate(ToffeTastic, startPos + rand, Quaternion.identity);
-            }
-            if (whatToSpawn == 17)
-            {
-                Instantiate(Smores, startPos + rand, Quaternion.identity);
-            }
+            Instantiate(Samoas, startPos + rand, Quaternion.identity);
             timer = 0;
-            spawntimer = Random.Range(1,6);
+            spawntimer = Random.Range(1, 3);
+        }
+        if (cookieFloodTimer >= cookieFloodTime)
+        {
+
+
+            if (timer >= spawntimer)
+            {
+                whatToSpawn = Random.Range(1, 18);
+                if (whatToSpawn <= 10)
+                {
+                    Instantiate(Samoas, startPos + rand, Quaternion.identity);
+                }
+                if (whatToSpawn == 11)
+                {
+                    Instantiate(Tagalongs, startPos + rand, Quaternion.identity);
+                }
+                if (whatToSpawn == 12)
+                {
+                    Instantiate(ThinMint, startPos + rand, Quaternion.identity);
+                }
+                if (whatToSpawn == 13)
+                {
+                    Instantiate(DoSiDos, startPos + rand, Quaternion.identity);
+                }
+                if (whatToSpawn == 14)
+                {
+                    Instantiate(SavanhaSimles, startPos + rand, Quaternion.identity);
+                }
+                if (whatToSpawn == 15)
+                {
+                    Instantiate(trefoils, startPos + rand, Quaternion.identity);
+                }
+                if (whatToSpawn == 16)
+                {
+                    Instantiate(ToffeTastic, startPos + rand, Quaternion.identity);
+                }
+                if (whatToSpawn == 17)
+                {
+                    Instantiate(Smores, startPos + rand, Quaternion.identity);
+                }
+                timer = 0;
+                spawntimer = Random.Range(1, 3);
+            }
         }
     }
 }
