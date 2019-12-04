@@ -5,8 +5,8 @@ public class CookieBehavior : MonoBehaviour
     // Start is called before the first frame update
     int scaler;
     bool destroy = false;
-    public int rangeMin = 5;
-    public int rangeMax = 10;
+    public int rangeMin = 3;
+    public int rangeMax = 8;
 
     void Start()
     {
