@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1846646518197922742}
   - component: {fileID: 1432245503871090533}
   - component: {fileID: 7692985423823344533}
+  - component: {fileID: 2923397995334215456}
+  - component: {fileID: 4033119958224815469}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -78,6 +80,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2923397995334215456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700486544458673920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1100b4c30a82fa341a985a005a7ada68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterialRef: {fileID: 2100000, guid: 82aa13b115c7edc4cbf49eeb9459999e, type: 2}
+--- !u!65 &4033119958224815469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700486544458673920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.395236, y: 0.612452, z: 4.147634}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5158061036258101917
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8200567803370305678}
+  - component: {fileID: 8514563317109870821}
   m_Layer: 0
   m_Name: Smores 1
   m_TagString: Untagged
@@ -109,3 +138,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8514563317109870821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158061036258101917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26473867d09b45e48b377834fe6ba1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeMin: 3
+  rangeMax: 8
