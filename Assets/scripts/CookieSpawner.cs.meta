@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 29c1a98e69a28394d9bc305f943ba302
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Smores: {instanceID: 0}
+  - ThinMint: {instanceID: 0}
+  - Samoas: {fileID: -927199367670048503, guid: 96b3689aff23ff8448ba8a17f270eeb2,
+      type: 3}
+  - Tagalongs: {instanceID: 0}
+  - DoSoDos: {instanceID: 0}
+  - SavanhaSimles: {instanceID: 0}
+  - trefoils: {instanceID: 0}
+  - ToffeTastic: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
